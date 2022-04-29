@@ -11,6 +11,7 @@ function SignIn() {
     const passwordPattern = new RegExp('^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).{8,}$');
 
     const [showSignUp, setShowSignUp] = useState(false);
+    const [showForgotPassword, setForgotPassword] = useState(false);
     const [loading, setLoading] = useState(false);
     const [checked, setChecked] = useState(false);
     const [signInData, setSignInData] = useState({ emailId: "", password: "" });
