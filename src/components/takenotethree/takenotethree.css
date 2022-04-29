@@ -1,0 +1,104 @@
+.note {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid rgb(211, 210, 210);
+    border-radius: 7px;
+    width: 18vw;
+    height: 20vh;
+    margin-left: 32vw;
+    margin-top: 5vw;
+    flex: 1;
+}
+
+.note:hover {
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.note_titles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    font-size: 18px;
+    font-weight: 500;
+    flex: 0.2;
+}
+
+.note_title {
+    text-align: start;
+}
+
+.pushpin {
+    opacity: 0;
+}
+
+.note:hover .pushpin {
+    opacity: 1;
+}
+
+.notes_description {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    letter-spacing: .01428571em;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    flex: 0.7;
+}
+
+.note_icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    opacity: 0;
+    flex: 0.1;
+}
+
+.note:hover .note_icons {
+    opacity: 1;
+}
+
+.notebox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-around;
+}
+
+.popu_title_parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup_title {
+    border: none;
+    width: 100%;
+    outline: none;
+    font-size: 22px;
+}
+
+.popup_description {
+    border: none;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+}
+
+.notebox_close {
+    display: flex;
+    flex-direction: row;
+    font-size: 19px;
+    align-items: flex-start;
+    border: none;
+    outline: none;
+}

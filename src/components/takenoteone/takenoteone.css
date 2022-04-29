@@ -1,0 +1,45 @@
+.takenoteone {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 38vw;
+    margin-left: 32vw;
+    margin-top: 4vh;
+    height: 4.5vh;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 10px;
+    padding: 5px 16px 5px 16px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.noteone_left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+}
+
+.text {
+    letter-spacing: .00625em;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: rgba(45, 45, 45, 0.702);
+    position: absolute;
+    width: 100%
+}
+
+.noteone_right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 125px;
+}
+
+.noteone_right>.MuiSvgIcon-root {
+    margin-right: 20px;
+}

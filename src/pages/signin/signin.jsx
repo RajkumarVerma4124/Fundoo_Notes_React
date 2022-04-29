@@ -5,13 +5,14 @@ import Button from '@mui/material/Button';
 import './signin.css'
 import SignUp from '../signup/signup';
 import { Checkbox, FormControlLabel } from '@mui/material';
+import { createAPIEndpoint, ENDPOINTS } from '../../services/userservice'
+
 
 function SignIn() {
     const emailIdPattern = new RegExp('^[a-zA-Z0-9]{3,}([._+-][0-9a-zA-Z]{2,})*@[0-9a-zA-Z]+[.]?([a-zA-Z]{2,4})+[.]?([a-zA-Z]{2,3})*$');
     const passwordPattern = new RegExp('^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).{8,}$');
 
     const [showSignUp, setShowSignUp] = useState(false);
-    const [showForgotPassword, setForgotPassword] = useState(false);
     const [loading, setLoading] = useState(false);
     const [checked, setChecked] = useState(false);
     const [signInData, setSignInData] = useState({ emailId: "", password: "" });
@@ -43,6 +44,11 @@ function SignIn() {
             setRegexSignInData(previousState => ({ ...previousState, passwordError: false, passwordHelperText: "", })) :
             setRegexSignInData(previousState =>
                 ({ ...previousState, passwordError: true, passwordHelperText: signInData.password.length !== 0 ? "Enter valid password like asdfG@56810" : "Enter password" })) 
+        if (passwordTest === true && emailTest === true) {
+            createAPIEndpoint(ENDPOINTS.SIGNIN, signInData).then((res) => console.log(res.data)).catch((err) => console.log(err))
+            // signup(signUpData)
+            // console.log(signup(signUpData))
+        } 
     }
 
     const toggleSignUp = (e) => {
@@ -59,7 +65,6 @@ function SignIn() {
             {showSignUp ? (<SignUp showSignUp={setShowSignUp}/>) : (
                 <div className="signin">
                     <div className="signin_content">
-                        {/* {loading && <BarLoader color="#1a73e8" loading={true} heightsize={150} />} */}
                         <div className={`signin_wrapper ${loading && "signin_fade"}`}>
                             <img className="signin_logo" src={logo} alt="" />
                             <h1 className="signin_title">Sign in</h1>

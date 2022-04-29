@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import logo from '../../assets/images/logo.svg';
 import account from '../../assets/images/account.svg';
 import './signup.css'
+import { createAPIEndpoint, ENDPOINTS } from '../../services/userservice'
 
 function SignUp({showSignUp}) {
    
@@ -64,6 +65,11 @@ function SignUp({showSignUp}) {
                 setRegexSignUpData(previousState =>
                     ({ ...previousState, passwordError: true, passwordHelperText: signUpData.password.length !== 0 ? "Enter valid password like asdfG@56810" : "Enter password" }))
 
+        if (passwordTest === true && emailTest === true && lastNameTest === true && firstNameTest === true) {
+            createAPIEndpoint(ENDPOINTS.SIGNUP, signUpData).then((res) => console.log(res)).catch((err) => console.log(err))
+            // signup(signUpData)
+            // console.log(signup(signUpData))
+        } 
     }
 
     const toggleSignUp = (e) => {
