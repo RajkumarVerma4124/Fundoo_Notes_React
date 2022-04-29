@@ -1,11 +1,12 @@
+import React from 'react'
 import './App.css';
+import SignIn from './pages/signin/signin';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-          Learn React
-      </header>
+    <div className="">
+      <SignIn />
     </div>
   );
 }

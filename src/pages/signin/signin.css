@@ -1,0 +1,154 @@
+.signin,
+.signup_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.signin_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dadce0;
+    width: 400px;
+    height: 66vh;
+    border-radius: 7px;
+    padding: 50px 25px;
+    --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.signin_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin_title {
+    padding-top: 16px;
+    font-size: 24px;
+    font-family: "Google Sans", "Noto Sans Myanmar UI", arial, sans-serif;
+    font-weight: 400;
+    word-break: break-word;
+    margin-top: -1px;
+}
+
+.signin_subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: -5px;
+    letter-spacing: 0.1px;
+    line-height: 1.5;
+}
+
+.signin_form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    margin-top: 20px !important;
+}
+
+.signin_infotext {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    color: #5f6368;
+    font-size: 14px;
+    line-height: 1.4286;
+}
+
+.forgot_text>a {
+    display: flex;
+    color: #1a73e8;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.4286;
+    justify-self: start;
+    margin-bottom: 15px;
+    margin-top: 8px;
+}
+
+.signin_infotext>a {
+    color: #1a73e8;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.signin_buttons_container,
+.signup_buttons_container {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 0;
+}
+
+.signin_button,
+.signup_button {
+    font-weight: 500 !important;
+    text-transform: capitalize !important;
+}
+
+.signin_button:first-of-type,
+.signip_button:first-of-type {
+    padding-left: 0;
+}
+
+.signin_fade {
+    opacity: 0.5;
+}
+
+@media (max-width: 376px) {
+    .signin_content {
+        margin-top: 15vh !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .signin {
+        width: 100vw;
+        height: 100vw;
+    }
+    .signin_wrapper {
+        margin-top: 30vh !important;
+        align-items: center;
+        justify-content: center;
+    }
+    .input {
+        width: 80vw;
+    }
+    .signin_content {
+        border: none;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 950px) {
+    .signin_wrapper {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+    .signin_content {
+        height: 55vh !important;
+        width: 55vw !important;
+        padding: -10 !important;
+    }
+}
+
+@media (max-width: 1025px) {
+    .signin_wrapper {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+    .signin_content {
+        height: 77vh !important;
+        width: 35vw !important;
+    }
+}
